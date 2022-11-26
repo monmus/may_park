@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta property="og:image" content="img/fot3a.JPG" />
+    <meta name="keywords" content="żaluzje, rolety, plisy">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="dist/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/logo_czarne.png">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-dotimeout/1.0/jquery.ba-dotimeout.min.js"></script>
+
+    <title>May Park Construction</title>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+          $("html").on("submit","#contact_form",function(e){
+            console.log("test")
+            e.preventDefault();
+            $("#send_form_status").html('').hide();
+            var data=$("#contact_form").serialize();
+            $.post("send_form.php",data,function(res){
+              $("#send_form_status").html(res.msg).show();
+              if(res.status==1){ 
+                $("#contact_form")[0].reset();
+              } 
+            });
+          });
+        });
+        </script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navigation">
+          <span style="display: flex">
+            <a href="./index.html"><img src="img/logo_m1.png" alt="logo" class="navigation__logo"></a>
+            <a href="./index.html"><img src="img/logo_m.png" alt="logo" class="navigation__logo--black"></a>
+            <!-- <img src="img/logo_ver_2.png" alt="logo" class="navigation__logo"> -->
+          </span>
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="#" class="navigation__link js--scroll-to-about">about us</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link js--scroll-to-profit">what we do</a></li>
+                <li class="navigation__item"><a href="#clients" class="navigation__link js--scroll-to-clients">our projects</a></li>
+                <li class="navigation__item"><a href="#footer" class="navigation__link js--scroll-to-footer">contact us</a></li>
+                <li class="navigation__item navigation__list--close" id="close-menu">&times;</li>
+            </ul>
+            <ion-icon name="menu" class="icon icon--menu" id="open-menu"></ion-icon>
+        </nav>
+
+
+        <div id="slideshow">
+            <img src="img/build_night.jpg" alt="grey_wall" />
+            <img src="img/wall_grey.jpg" alt="grey_stone" />
+            <img src="img/wall_stone.jpg" alt="wall_stone" />
+            <img src="img/sky.jpg" alt="wall_stone" />
+        </div>
+             
+        <div class="header__text-box">
+            <div class="section-overlay-mask1">
+            <span class="header__small-text">Take your building to the next level</span>
+            <h1 class="heading-primary">
+              Our expertise at the Service of your Vision
+            </h1>
+            </div>
+        </div>
+    </header>
+
+    <section class="section-about js--section-about " id="about">
+        <div class="row">
+            <h2 class="heading-secondary u-center-text js--animated">
+               Commitment, quality, people and practices
+            </h2>
+
+            <div class="section-about__features js--animated">
+                <div class="feature">
+                    <ion-icon name="person" class="icon icon-big icon-big--green" style="color: rgb(144, 124, 6)"></ion-icon>
+                    <h3 class="heading-tertiary">WHO WE ARE</h3>
+                    <p class="paragraph feature__text">
+                        Since 1983, we have been providing comprehensive services in the field of the investment process - from concept through design, formal and legal issues, to turnkey implementation.
+                    </p>
+                </div>
+                <div class="feature">
+                    <ion-icon name="construct" class="icon icon-big icon-big--green" style="color: rgb(144, 124, 6)"></ion-icon>
+                    <h3 class="heading-tertiary">WHAT WE DO</h3>
+                    <p class="paragraph feature__text">
+                        We implement and service construction investments as a general contractor, substitute investor or in other business relationships.
+                    </p>
+                </div>
+                <div class="feature">
+                    <ion-icon name="home" class="icon icon-big icon-big--green" style="color: rgb(144, 124, 6)"></ion-icon>
+                    <h3 class="heading-tertiary">SERVICE</h3>
+                    <p class="paragraph feature__text">
+                        We are open to starting cooperation at any stage of the investment. If you already have your dream project, we will be happy to help you make it happen.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section-profit js--section-profit" id="oferta">
+        <div class="section-overlay-mask1">
+        <h2 class="heading-secondary heading-secondary--white
+        u-center-text margin-bottom-big section-profit__heading">Here we can listed some details about service, what kind of projects you run etc</h2>
+
+        <div class="row">
+            <div class="section-profit__box">
+                <div class="section-profit__item js--animated">
+                    <ion-icon name="checkmark" class="icon icon-small icon-small--orange"></ion-icon>
+                    <p class="paragraph section-profit__text">A</p>
+                </div>
+                <div class="section-profit__item js--animated">
+                    <ion-icon name="checkmark" class="icon icon-small icon-small--orange"></ion-icon>
+                    <p class="paragraph section-profit__text">B</p>
+                </div>
+                <div class="section-profit__item js--animated">
+                    <ion-icon name="checkmark" class="icon icon-small icon-small--orange"></ion-icon>
+                    <p class="paragraph section-profit__text">C</p>
+                </div>
+                <div class="section-profit__item js--animated">
+                    <ion-icon name="checkmark" class="icon icon-small icon-small--orange"></ion-icon>
+                    <p class="paragraph section-profit__text">D</p>
+                </div>
+                <div class="section-profit__item js--animated">
+                    <ion-icon name="checkmark" class="icon icon-small icon-small--orange"></ion-icon>
+                    <p class="paragraph section-profit__text">E</p>
+                </div>
+                <div class="section-profit__item js--animated">
+                    <ion-icon name="checkmark" class="icon icon-small icon-small--orange"></ion-icon>
+                    <p class="paragraph section-profit__text">F</p>
+                </div>
+                <div class="section-profit__item js--animated">
+                    <ion-icon name="checkmark" class="icon icon-small icon-small--orange"></ion-icon>
+                    <p class="paragraph section-profit__text">G</p>
+                </div>
+                <div class="section-profit__item js--animated">
+                    <ion-icon name="checkmark" class="icon icon-small icon-small--orange"></ion-icon>
+                    <p class="paragraph section-profit__text">H</p>
+                </div>
+                <div class="section-profit__item js--animated">
+                    <ion-icon name="checkmark" class="icon icon-small icon-small--orange"></ion-icon>
+                    <p class="paragraph section-profit__text">I</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="section-organisers js--section-organisers">
+        <div class="row">
+            <div class="section-organisers__heading">
+                <h2 class="heading-secondary">Projects completed</h2>
+            </div>
+        <!-- <div class="section-organisers__box js--animated" id="photo"> -->
+<!--             
+            <div class="gallery-wrapper">
+                <div class="image-wrapper">
+                  <a href="#lightbox-image-1">
+                    <img src="img/fot1a.JPG" alt="" style="height: 180px"> -->
+                    <!-- <div class="image-title">Cat staring at me</div> -->
+                  <!-- </a>
+                </div>
+                <div class="image-wrapper">
+                  <a href="#lightbox-image-2">
+                    <img src="img/fot3a.JPG" alt="" style="height: 180px"> -->
+                    <!-- <div class="image-title">Cat playing with mouse</div> -->
+                  <!-- </a>
+                </div>
+                <div class="image-wrapper">
+                  <a href="#lightbox-image-3">
+                    <img src="img/fot5.JPG" alt="" style="height: 180px"> -->
+                    <!-- <div class="image-title">Cat turns away</div> -->
+                  <!-- </a>
+                </div>
+                <div class="image-wrapper">
+                    <a href="#lightbox-image-4">
+                      <img src="img/w3.JPG" alt="" style="height: 390px"> -->
+                      <!-- <div class="image-title">Cat turns away</div> -->
+                    <!-- </a>
+                  </div>
+                  <div class="image-wrapper">
+                    <a href="#lightbox-image-5">
+                      <img src="img/DSC_40780003.JPG" alt="" style="height: 390px"> -->
+                      <!-- <div class="image-title">Cat turns away</div> -->
+                    <!-- </a>
+                  </div>
+                  <div class="image-wrapper">
+                    <a href="#lightbox-image-6">
+                      <img src="img/fotzew.jpg" alt="" style="height: 390px"> -->
+                      <!-- <div class="image-title">Cat turns away</div> -->
+                    <!-- </a>
+                  </div>
+                  <div class="image-wrapper">
+                    <a href="#lightbox-image-4">
+                      <img src="img/nowe2.jpg" alt="" style="height: 390px"> -->
+                      <!-- <div class="image-title">Cat turns away</div> -->
+                    <!-- </a>
+                  </div>
+                  <div class="image-wrapper">
+                    <a href="#lightbox-image-5">
+                      <img src="img/nowe6.jpg" alt="" style="height: 390px"> -->
+                      <!-- <div class="image-title">Cat turns away</div> -->
+                    <!-- </a>
+                  </div>
+                  <div class="image-wrapper">
+                    <a href="#lightbox-image-6">
+                      <img src="img/nowe7.jpg" alt="" style="height: 390px"> -->
+                      <!-- <div class="image-title">Cat turns away</div> -->
+                    <!-- </a>
+                  </div>
+                  <div class="image-wrapper">
+                    <a href="#lightbox-image-7">
+                      <img src="img/nowe5.jpg" alt="" style="height: 180px"> -->
+                      <!-- <div class="image-title">Cat turns away</div> -->
+                    <!-- </a>
+                  </div>
+                  <div class="image-wrapper">
+                    <a href="#lightbox-image-8">
+                      <img src="img/nowe4.jpg" alt="" style="height: 180px"> -->
+                      <!-- <div class="image-title">Cat turns away</div> -->
+                    <!-- </a>
+                  </div>
+                  <div class="image-wrapper">
+                    <a href="#lightbox-image-9"> -->
+                      <!-- <img src="img/nowe3.jpg" alt="" style="height: 180px"> -->
+                      <!-- <div class="image-title">Cat turns away</div> -->
+                    <!-- </a>
+                  </div>
+              </div> -->
+<!--               
+              <div class="gallery-lightboxes">
+                
+                <div class="image-lightbox" id="lightbox-image-1">
+                  <div class="image-lightbox-wrapper">
+                    <a href="#photo" class="close"></a>
+                    <a href="#lightbox-image-12" class="arrow-left"></a>
+                    <a href="#lightbox-image-2" class="arrow-right"></a>
+                    <img src="img/fot1a.JPG" alt="" style="height: 320px"> -->
+                    <!-- <div class="image-title">Cat staring at me</div> -->
+                  <!-- </div>
+                </div>
+                
+                <div class="image-lightbox" id="lightbox-image-2">
+                  <div class="image-lightbox-wrapper">
+                    <a href="#photo" class="close"></a>
+                    <a href="#lightbox-image-1" class="arrow-left"></a>
+                    <a href="#lightbox-image-3" class="arrow-right"></a>
+                    <img src="img/fot3a.JPG" alt="" style="height: 320px"> -->
+                    <!-- <div class="image-title">Cat playing with mouse</div> -->
+                  <!-- </div>
+                </div>
+                
+                <div class="image-lightbox" id="lightbox-image-3">
+                  <div class="image-lightbox-wrapper">
+                    <a href="#photo" class="close"></a>
+                    <a href="#lightbox-image-2" class="arrow-left"></a>
+                    <a href="#lightbox-image-4" class="arrow-right"></a>
+                    <img src="img/fot5.JPG" alt="" style="height: 320px"> -->
+                    <!-- <div class="image-title">Cat turns away</div> -->
+                  <!-- </div>
+                </div>
+
+                <div class="image-lightbox" id="lightbox-image-4">
+                    <div class="image-lightbox-wrapper">
+                      <a href="#photo" class="close"></a>
+                      <a href="#lightbox-image-3" class="arrow-left"></a>
+                      <a href="#lightbox-image-5" class="arrow-right"></a>
+                      <img src="img/w3.JPG" alt="" style="height: 320px"> -->
+                      <!-- <div class="image-title">Cat turns away</div> -->
+                    <!-- </div>
+                  </div>
+
+                  <div class="image-lightbox" id="lightbox-image-5">
+                    <div class="image-lightbox-wrapper">
+                      <a href="#photo" class="close"></a>
+                      <a href="#lightbox-image-4" class="arrow-left"></a>
+                      <a href="#lightbox-image-6" class="arrow-right"></a>
+                      <img src="img/DSC_40780003.JPG" alt="" style="height: 320px"> -->
+                      <!-- <div class="image-title">Cat turns away</div> -->
+                    <!-- </div>
+                  </div>
+
+                  <div class="image-lightbox" id="lightbox-image-6">
+                    <div class="image-lightbox-wrapper">
+                      <a href="#photo" class="close"></a>
+                      <a href="#lightbox-image-5" class="arrow-left"></a>
+                      <a href="#lightbox-image-7" class="arrow-right"></a>
+                      <img src="img/fotzew.jpg" alt="" style="height: 320px"> -->
+                      <!-- <div class="image-title">Cat turns away</div> -->
+                    <!-- </div>
+                  </div>
+
+                  <div class="image-lightbox" id="lightbox-image-7">
+                    <div class="image-lightbox-wrapper">
+                      <a href="#photo" class="close"></a>
+                      <a href="#lightbox-image-6" class="arrow-left"></a>
+                      <a href="#lightbox-image-8" class="arrow-right"></a>
+                      <img src="img/nowe2.jpg" alt="" style="height: 320px"> -->
+                      <!-- <div class="image-title">Cat turns away</div> -->
+                    <!-- </div>
+                  </div>
+
+                  <div class="image-lightbox" id="lightbox-image-8">
+                    <div class="image-lightbox-wrapper">
+                      <a href="#photo" class="close"></a>
+                      <a href="#lightbox-image-7" class="arrow-left"></a>
+                      <a href="#lightbox-image-9" class="arrow-right"></a>
+                      <img src="img/nowe6.jpg" alt="" style="height: 320px"> -->
+                      <!-- <div class="image-title">Cat turns away</div> -->
+                    <!-- </div>
+                  </div>
+
+                  <div class="image-lightbox" id="lightbox-image-9">
+                    <div class="image-lightbox-wrapper">
+                      <a href="#photo" class="close"></a>
+                      <a href="#lightbox-image-8" class="arrow-left"></a>
+                      <a href="#lightbox-image-10" class="arrow-right"></a>
+                      <img src="img/nowe7.jpg" alt="" style="height: 320px"> -->
+                      <!-- <div class="image-title">Cat turns away</div> -->
+                    <!-- </div>
+                  </div>
+
+                  <div class="image-lightbox" id="lightbox-image-7">
+                    <div class="image-lightbox-wrapper">
+                      <a href="#photo" class="close"></a>
+                      <a href="#lightbox-image-9" class="arrow-left"></a>
+                      <a href="#lightbox-image-11" class="arrow-right"></a>
+                      <img src="img/nowe5.jpg" alt="" style="height: 320px"> -->
+                      <!-- <div class="image-title">Cat turns away</div> -->
+                    <!-- </div>
+                  </div>
+
+                  <div class="image-lightbox" id="lightbox-image-8">
+                    <div class="image-lightbox-wrapper">
+                      <a href="#photo" class="close"></a>
+                      <a href="#lightbox-image-10" class="arrow-left"></a>
+                      <a href="#lightbox-image-12" class="arrow-right"></a>
+                      <img src="img/nowe4.jpg" alt="" style="height: 320px"> -->
+                      <!-- <div class="image-title">Cat turns away</div> -->
+                    <!-- </div>
+                  </div> -->
+
+                  <!-- <div class="image-lightbox" id="lightbox-image-9">
+                    <div class="image-lightbox-wrapper">
+                      <a href="#photo" class="close"></a>
+                      <a href="#lightbox-image-11" class="arrow-left"></a>
+                      <a href="#lightbox-image-1" class="arrow-right"></a>
+                      <img src="img/nowe3.jpg" alt="" style="height: 320px"> -->
+                      <!-- <div class="image-title">Cat turns away</div> -->
+                    <!-- </div>
+                  </div>
+                </div>
+            </div>
+        </div> -->
+
+
+    <div class="slider-container" style="height: 90vh">
+          <div class="slider-left" id="left_slider">
+            <div class="slide" data-id="1" style="background-image: url(img/foto1.jpeg)"></div>
+            <div class="slide" data-id="2" style="background-image: url(img/foto2.jpeg)"></div>
+            <div class="slide" data-id="3" style="background-image: url(img/foto3.jpeg)"></div>
+            <div class="slide" data-id="4" style="background-image: url(img/foto4.jpeg)"></div>
+            <div class="slide" data-id="5" style="background-image: url(img/foto5.jpeg)"></div>
+            <div class="slide" data-id="6" style="background-image: url(img/foto6.jpeg)"></div>
+            <!-- <div class="slide" data-id="7" style="background-image: url(img/nowe4.jpg)"></div>
+            <div class="slide" data-id="8" style="background-image: url(img/nowe3.jpg)"></div>
+            <div class="slide" data-id="9" style="background-image: url(img/fotzew.jpg)"></div>
+            <div class="slide" data-id="10" style="background-image: url(img/DSC_40780003.JPG)"></div> -->
+          </div>
+
+          <div class="slider-right" id="right_slider">
+
+            <div class="slide" data-id="1">
+              <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
+              <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dignissim nulla a neque sodales, eget sodales dolor aliquet.</p>
+            </div>
+
+            <div class="slide" data-id="2">
+              <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
+              <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dignissim nulla a neque sodales, eget sodales dolor aliquet.</p>
+            </div>
+
+            <div class="slide" data-id="3">
+              <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
+              <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dignissim nulla a neque sodales, eget sodales dolor aliquet.</p>
+            </div>
+
+            <div class="slide" data-id="4">
+              <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
+              <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dignissim nulla a neque sodales, eget sodales dolor aliquet.</p>
+            </div>
+
+            <div class="slide" data-id="5">
+              <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
+              <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dignissim nulla a neque sodales, eget sodales dolor aliquet.</p>
+            </div>
+
+            
+            <div class="slide" data-id="6">
+              <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
+              <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dignissim nulla a neque sodales, eget sodales dolor aliquet.</p>
+            </div>
+
+<!--             
+            <div class="slide" data-id="7">
+              <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
+              <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dignissim nulla a neque sodales, eget sodales dolor aliquet.</p>
+            </div>
+
+            
+            <div class="slide" data-id="8">
+              <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
+              <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dignissim nulla a neque sodales, eget sodales dolor aliquet.</p>
+            </div>
+
+            
+            <div class="slide" data-id="9">
+              <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
+              <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dignissim nulla a neque sodales, eget sodales dolor aliquet.</p>
+            </div>
+
+            <div class="slide" data-id="10">
+              <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
+              <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dignissim nulla a neque sodales, eget sodales dolor aliquet.</p>
+            </div> -->
+
+            <div class="slider-buttons">
+              <button type="button" id="slide-left"><i class="fas fa-arrow-left"></i></button>
+              <button type="button" id="slide-right"><i class="fas fa-arrow-right"></i></button>
+            </div>
+
+          </div>
+      </div>
+    </section>
+
+    <!-- <section class="section-clients js--section-clients" id="clients">
+        <div class="row">
+            <h2 class="heading-secondary u-center-text margin-bottom-big">JAK DBAĆ O NASZE PRODUKTY? <br><br>
+           
+            Przydatne porady i wskazówki jak czyścić i konserwować rolety, moskitiery oraz żaluzje </h2>
+            
+            <div class="u-center-text">
+                <a href="./poradnik.html" class="btnadjust btnadjust--gold">
+                   Dowiedz się więcej
+                </a>
+            </div>
+        </div>
+    </section>  -->
+
+    <footer class="footer js--footer" id="footer">
+        <div class="row">
+            <div class="footer__info"> 
+                <span class="header__small-text">Have a question? Get in touch.
+
+                </span>
+            </div>
+            <div class="footer__display">
+            <div class="footer__contact">
+                <h3 class="footer__contact--heading">
+                    May Park Construction <br> <br>
+                </h3>
+                <p class="footer__contact--text">
+                  5995 Greenwood Plaza Blvd, Suite 100 <br>
+                  Greenwood Village, CO 80111
+                  <br><br>
+
+                    Are you interested in hearing more information about our services? Please fill out the short form and we will contact you as soon as possible!
+
+                    <br><br>
+
+                    <i class="fas fa-envelope" style="color: rgb(144, 124, 6)"></i><span style='color:white'> info@mayparkconstruction.eu |</span>
+                    <a href="tel:+48508958578" style="text-decoration: none">
+                        <i class="fa fa-phone" aria-hidden="true"  style="color: rgb(144, 124, 6)"></i><span style='color:white'> 508-948-578</span>
+                    </a>
+                </p>
+            </div>
+
+            <div class="footer__contact">
+                <h3 class="footer__contact--heading">Contact Form</h3>
+             
+                <br>
+                <div id="send_form_status"></div>
+                <form method="post" action="send_form.php" id="contact_form">
+                     <!-- <div><label for="name">Imię i nazwisko</label></div> -->
+                     <div><input type="text" name="name" id="name" class="formField" placeholder="Name" /></div>
+                     <!-- <div><label for="phone">Numer telefonu</label></div> -->
+                     <div><input type="text" name="phone" id="phone" class="formField" placeholder="Phone Number" /></div>
+                     <!-- <div><label for="email">Adres email</label></div> -->
+                     <div><input type="text" name="email" id="email" class="formField" placeholder="Email Address" /></div>
+                     <!-- <div><label for="message">Treść wiadomości</label></div> -->
+                     <div><textarea name="message" id="message" class="formField" placeholder="Message"></textarea></div>
+                     <div><button id="sendBtn">Send</button></div>
+                </form>
+            </div>
+            </div>
+            
+            
+            <div class="footer__copyright">
+                Copyright &copy; by Monik@. 2021
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+    <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+   -->
+    
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

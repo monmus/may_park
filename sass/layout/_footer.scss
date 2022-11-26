@@ -1,0 +1,166 @@
+.footer {
+  background-color: var(--background-color-dark-1);
+  padding: 2rem;
+
+  &__info {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+
+    @media (max-width: 700px) {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__display {
+    display: flex;
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+
+  &__about-us {
+    @media (max-width: 700px) {
+      margin-bottom: 4rem;
+    }
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+    }
+  }
+
+  &__about-us,
+  &__social-media {
+    list-style: none;
+    display: flex;
+  }
+
+  &__item,
+  &__media-item {
+    &:not(:last-child) {
+      margin-right: 2rem;
+
+      @media (max-width: 600px) {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--primary-text-color-light);
+    }
+  }
+
+  &__link {
+    color: var(--secondary-text-color);
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+
+    @media (max-width: 600px) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__contact {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    width: 50%;
+
+    @media (max-width: 600px) {
+      // flex-direction: column;
+      width: 100%;
+    }
+
+    &--heading {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      color: white;
+    }
+
+    &--text {
+      font-size: 1.5rem;
+      color: white;
+      text-decoration: none;
+    }
+
+    display: flex;
+    flex-direction: column;
+
+    font-weight: 500;
+    color: rgb(238, 234, 234);
+
+    // p {
+    //   text-align: left;
+
+    //   color: rgb(19, 17, 17);
+    //   font-weight: 400;
+    //   font-size: 17px;
+
+    // }
+
+    .formField {
+      width: 87%;
+      font-family: "Open Sans";
+      border-bottom: 1px solid #ccc;
+      border-top: 1px #ccc;
+      border-left: 1px #ccc;
+      border-right: 1px #ccc;
+      border-radius: 3px;
+      margin: 3px 0 10px 0;
+      padding: 10px 3px;
+      font-size: 1.5rem;
+    }
+
+    textarea.formField {
+      border: 1px solid #ccc;
+      // width: 350px;
+      height: 70px;
+      font-family: "Open Sans";
+    }
+
+    #sendBtn {
+      cursor: pointer;
+      background: #b4976d;
+      color: white;
+      // background: linear-gradient(rgb(168, 167, 167) 0, #eee 100%);
+      border: 1px solid #ccc;
+      line-height: 32px;
+      font-size: 14px;
+      padding: 0 25px;
+      border-radius: 3px;
+      &:hover {
+        background-color: #4e4e4d;
+        cursor: pointer;
+      }
+
+      #send_form_status {
+        border: 1px dashed #ccc;
+        display: none;
+        padding: 0 10px;
+        margin: 10px 0;
+      }
+      .status_ok {
+        color: #060;
+      }
+      .status_err {
+        color: #f00;
+      }
+    }
+  }
+
+  &__copyright {
+    text-align: center;
+    font-size: 1.6rem;
+    color: rgb(238, 234, 234);
+  }
+}
